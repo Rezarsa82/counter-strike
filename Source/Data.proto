@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package GameData;
+
+message GameData {
+  enum KWeaponType {
+    heavy = 0;
+    pistol = 1;
+    knife = 2;
+  };
+  enum Access {
+    setting = 0;
+    terrorist = 1;
+    counter_terrorist = 2;
+    all = 3;
+  };
+  enum Team {
+    Terrorist = 0;
+    Counter_Terrorist = 1;
+  };
+};
