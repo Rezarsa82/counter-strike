@@ -21,12 +21,12 @@ int main() {
 
     cin >> R;
     for (int i = 0; i < R; ++i) {
-      controller->NewRound();
       cin >> task >> n;
       for (int j = 0; j < n; ++j) {
         cin >> task;
         decide(task, *controller);
       }
+      controller->NewRound();
     }
   }
   catch (Exception &err){
