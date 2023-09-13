@@ -33,7 +33,7 @@ bool Warrior::CanAttack(int reduce_health) {
 void Warrior::Buy(const std::string &name) {
   auto weapon = WeaponsData::GetWeapon(name, access_level_);
   if (weapon->GetPrice() > money_.GetMoney())
-    throw Exception("no enough money_");
+    throw Exception("no enough money");
   if (weapons_.count(weapon->GetType()))
     throw Exception("you have a " + Configuration::WeaponString(weapon->GetType()));
   money_.ReduceMoney(weapon->GetPrice());
