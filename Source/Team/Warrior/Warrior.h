@@ -27,7 +27,7 @@ class Warrior {
   void AddKill(GameData::GameData::KWeaponType);
   void Buy(const std::string&);
   bool IsAlive() const;
-  bool CanAttack(int);
+  bool CanAttacked(int);
   bool HasWeapon(GameData::GameData::KWeaponType) const;
   bool IsBetter(Warrior*) const;
   Weapon *GetWeapon(GameData::GameData::KWeaponType) const;
