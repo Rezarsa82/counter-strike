@@ -85,7 +85,7 @@ bool Warrior::IsAlive() const {
 /// check tha warrior's weapon to check warrior has a weapon or not
 /// \param type the type of weapon that want t check
 /// \return
-bool Warrior::CheckWeapon(GameData::GameData::KWeaponType type) const {
+bool Warrior::HasWeapon(GameData::GameData::KWeaponType type) const {
   return weapons_.count(type);
 }
 /// get warrior's weapon
