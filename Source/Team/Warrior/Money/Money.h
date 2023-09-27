@@ -2,6 +2,7 @@
 #define COUNTER_STRIKE_TEAM_WARRIOR_MONEY_MONEY_H_
 
 #include "../../../GameFeatures/Configuration/Configuration.h"
+#include "../../../GameFeatures/Exception/Exception.h"
 
 class Money{
  public:
