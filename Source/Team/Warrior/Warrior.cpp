@@ -17,7 +17,7 @@ void Warrior::EndGame() {
 ///
 /// \param reduce_health  warrior's health should be reduced when attacked
 /// \return result of the attack, Warrior is alive or not
-bool Warrior::CanAttack(int reduce_health) {
+bool Warrior::CanAttacked(int reduce_health) {
   if (!IsAlive())
     throw Exception("Warrior is not live!");
   health_.ReduceHealth(reduce_health);
