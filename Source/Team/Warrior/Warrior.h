@@ -28,7 +28,7 @@ class Warrior {
   void Buy(const std::string&);
   bool IsAlive() const;
   bool CanAttack(int);
-  bool CheckWeapon(GameData::GameData::KWeaponType) const;
+  bool HasWeapon(GameData::GameData::KWeaponType) const;
   bool IsBetter(Warrior*) const;
   Weapon *GetWeapon(GameData::GameData::KWeaponType) const;
  private:
