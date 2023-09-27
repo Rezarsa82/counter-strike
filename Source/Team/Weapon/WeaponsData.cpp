@@ -16,7 +16,5 @@ std::map<std::string, Weapon *> WeaponsData::weapons_ = {
 /// \return weapon if exist
 
 Weapon *WeaponsData::GetWeapon(const std::string &name, GameData::GameData::Access accessLevel) {
-  /*
   return weapons_[name];
-   */
 }
