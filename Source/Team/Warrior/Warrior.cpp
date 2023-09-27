@@ -92,7 +92,7 @@ bool Warrior::HasWeapon(GameData::GameData::KWeaponType type) const {
 /// \param type type of the weapon that must returned
 /// \return
 Weapon *Warrior::GetWeapon(GameData::GameData::KWeaponType type) const {
-  if (CheckWeapon(type))
+  if (HasWeapon(type))
     return const_cast<Weapon *>(weapons_.at(type));
   else
     return nullptr;
