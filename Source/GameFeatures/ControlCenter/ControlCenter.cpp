@@ -59,7 +59,7 @@ std::string ControlCenter::Tap(const std::string &attacker, const std::string &a
     throw Exception("no such gun");
   if (!(terrorist_->IsTeammate(attacker) ^ terrorist_->IsTeammate(attacked)))
     throw Exception("friendly fire");
-  if (attacked_player->CanAttack(attacker_player->GetWeapon(type)->GetPower())) { attacker_player->AddKill(type); }
+  if (attacked_player->CanAttacked(attacker_player->GetWeapon(type)->GetPower())) { attacker_player->AddKill(type); }
   return "nice shot";
 }
 /// check money/ username/ weapon and ... to buy a gun
