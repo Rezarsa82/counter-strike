@@ -55,7 +55,7 @@ std::string ControlCenter::Tap(const std::string &attacker, const std::string &a
     throw Exception("attacker is dead");
   if (!attacked_player->IsAlive())
     throw Exception("attacked is dead");
-  if (!attacker_player->CheckWeapon(type))
+  if (!attacker_player->HasWeapon(type))
     throw Exception("no such gun");
   if (!(terrorist_->IsTeammate(attacker) ^ terrorist_->IsTeammate(attacked)))
     throw Exception("friendly fire");
