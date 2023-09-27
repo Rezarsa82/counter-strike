@@ -16,6 +16,8 @@ void Money::AddMoney(int m) {
 ///
 /// \param m amount of money that add from the money of the warrior
 void Money::ReduceMoney(int m) {
+  if((money_ - m) < 0)
+    throw Exception::("money is not enough");
   money_ -= m;
 }
 ///
