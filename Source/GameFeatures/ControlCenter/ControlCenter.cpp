@@ -77,12 +77,12 @@ std::string ControlCenter::Buy(const std::string &name, const std::string &weapo
 /// print scoreboard of the game by call scoreboard from teams
 void ControlCenter::ScoreBoard() const {
   std::cout << "Counter-Terrorist-Players:" << std::endl;
-  for(int i = 0; i < counter_terrorist_->GetScoreBoard().size(); i++){
+  for (int i = 0; i < counter_terrorist_->GetScoreBoard().size(); i++){
     std::cout << i + 1 << " ";
     counter_terrorist_->GetScoreBoard()[i]->PrintWarrior();
   }
   std::cout << "Terrorist-Players:" << std::endl;
-  for(int i = 0; i < terrorist_->GetScoreBoard().size(); i++){
+  for (int i = 0; i < terrorist_->GetScoreBoard().size(); i++){
     std::cout << i + 1 << " ";
     terrorist_->GetScoreBoard()[i]->PrintWarrior();
   }
