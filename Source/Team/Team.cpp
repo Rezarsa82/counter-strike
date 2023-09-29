@@ -1,6 +1,11 @@
 #include "Team.h"
 
-Team::Team(GameData::GameData::Access access_level) : KAccessLevel_(access_level) {}
+Team::Team(GameData::GameData::Access access_level) : KAccessLevel_(access_level) {
+  if(access_level == GameData::GameData::Access::GameData_Access_terrorist)
+    name = "Terrorist";
+  else
+    name = "Counter-Terrorist";
+}
 /// check the teammate limit and add a warrior to team
 /// \param name name of the new warrior
 /// \param time time that join the team
