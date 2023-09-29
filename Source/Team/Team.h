@@ -25,8 +25,10 @@ class Team {
   void Won() const;
   void Lose() const;
   int GetAliveNum() const;
+  std::string GetName() const;
   ~Team();
  private:
+  std::string name;
   std::map<std::string, Warrior *> warriors_;
   const GameData::GameData::Access KAccessLevel_;
 };
