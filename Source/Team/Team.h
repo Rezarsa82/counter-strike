@@ -29,7 +29,7 @@ class Team {
   ~Team();
  private:
   std::string name;
-  std::map<std::string, Warrior *> warriors_;
+  std::map<std::string, std::reference_wrapper<Warrior> > warriors_;
   const GameData::GameData::Access KAccessLevel_;
 };
 
