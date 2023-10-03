@@ -52,13 +52,13 @@ std::string ControlCenter::Tap(const std::string &attacker, const std::string &a
   auto attacker_player = Find(attacker);
   auto attacked_player = Find(attacked);
   if (!attacker_player->IsAlive())
-    throw Exception("attacker is dead");
+    TapException::AttackerIsDead;
   if (!attacked_player->IsAlive())
-    throw Exception("attacked is dead");
+    TapException::AttackedIsDead();
   if (!attacker_player->HasWeapon(type))
-    throw Exception("no such gun");
+    TapException::NoGun();
   if (!(terrorist_->IsTeammate(attacker) && terrorist_->IsTeammate(attacked)))
-    throw Exception("friendly fire");
+    TapException::FriendlyFire();
   if (attacked_player->CanAttacked(attacker_player->GetWeapon(type)->GetPower())) { attacker_player->AddKill(type); }
   return "nice shot";
 }
