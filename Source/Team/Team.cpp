@@ -1,7 +1,7 @@
 #include "Team.h"
 
 Team::Team(GameData::GameData::Access access_level) : KAccessLevel_(access_level) {
-  if(access_level == GameData::GameData::Access::GameData_Access_terrorist)
+  if (access_level == GameData::GameData::Access::GameData_Access_terrorist)
     name = "Terrorist";
   else
     name = "Counter-Terrorist";
